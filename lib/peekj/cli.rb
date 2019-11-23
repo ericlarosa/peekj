@@ -1,13 +1,15 @@
 require 'peekj'
 require 'thor'
-require 'http'
 
 module Peekj
   class CLI < Thor
-    desc 'summary ITEM', 'test'
-    def summary(item)
-      say(item.to_s)
+    desc "summary ITEM", "Prints issue summary"
+    def summary(issue_key)
+      issue = JiraApi.get_issue(issue_key)
+
+      say(issue.summary)
     end
+
 
     desc "login", "Enter login credentials"
     def login
