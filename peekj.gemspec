@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["eric@rosa.la"]
 
   spec.summary       = 'Integrate with jira and fetch issues info'
-  spec.description   = 'Integrate with jira and fetch issues info'
+  spec.description   = 'Integrate with jira and fetch issues info.'
   spec.homepage      = 'https://github.com/ericlarosa/peekj'
   spec.license       = "MIT"
 
@@ -19,8 +19,10 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.2"
   spec.add_runtime_dependency "http"
   spec.add_runtime_dependency "thor"
 end
