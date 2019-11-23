@@ -1,4 +1,5 @@
 require "peekj/version"
+require "peekj/credentials"
 require "peekj/cli"
 
 module Peekj
