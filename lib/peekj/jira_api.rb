@@ -7,7 +7,8 @@ module Peekj
       response = new.get("issue/#{issue_key}")
 
       OpenStruct.new(
-        summary: response['fields']['summary']
+        summary: response['fields']['summary'],
+        description: response['fields']['description']
       )
     end
 
