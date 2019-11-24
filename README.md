@@ -32,6 +32,10 @@ Fetch issue summary from current branch name:
 
     $ peekj summary --current_branch
 
+Add comment to issue (also works with `--current_branch`)
+
+    $ peekj comment ISSUE-KEY
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ericlarosa/peekj. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
