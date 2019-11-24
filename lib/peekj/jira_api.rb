@@ -7,8 +7,12 @@ module Peekj
       response = new.get("issue/#{issue_key}")
 
       OpenStruct.new(
+        status: response['fields']['status']['name'],
         summary: response['fields']['summary'],
-        description: response['fields']['description']
+        description: response['fields']['description'],
+        comments: response['fields']['comment']['comments'].map { |c|
+          {author: c['author']['displayName'], body: c['body']}
+        }
       )
     end
 
