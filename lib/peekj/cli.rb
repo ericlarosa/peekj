@@ -39,6 +39,20 @@ module Peekj
       end
     end
 
+    desc "comment ITEM", "Adds comment to issue"
+    method_options current_branch: :boolean
+    def comment(issue_key=nil)
+      issue_key = current_branch_issue_key if options['current_branch']
+
+      add_comment_succeeded = JiraApi.add_comment(issue_key, ask('Comment:', [:red, :bold]))
+
+      if add_comment_succeeded
+        say('Comment added succesfully', [:green, :bold])
+      else
+        say('Error', [:red, :bold])
+      end
+    end
+
     private
 
     def current_branch_issue_key

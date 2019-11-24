@@ -16,8 +16,19 @@ module Peekj
       )
     end
 
+    def self.add_comment(issue_key, comment_body)
+      params =  {body: comment_body}
+      response = new.post("issue/#{issue_key}/comment", params)
+      post_succeeded = !response['created'].nil?
+      post_succeeded
+    end
+
     def get(relative_path)
       HTTP.basic_auth(auth_params).get("#{base_url}#{relative_path}").parse
+    end
+
+    def post(relative_path, params)
+      HTTP.basic_auth(auth_params).post("#{base_url}#{relative_path}", json: params).parse
     end
 
     private
