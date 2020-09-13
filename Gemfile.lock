@@ -28,7 +28,7 @@ GEM
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
     public_suffix (4.0.6)
-    rake (10.5.0)
+    rake (13.0.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -53,7 +53,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   peekj!
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.2)
 
 BUNDLED WITH
