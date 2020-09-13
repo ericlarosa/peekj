@@ -8,7 +8,6 @@ module Peekj
           keychain_password(credential_key)
         end
 
-
         define_method :"#{credential_key}=" do |credential_value|
           add_or_update_keychain_password(credential_key, credential_value)
         end

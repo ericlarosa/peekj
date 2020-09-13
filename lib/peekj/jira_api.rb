@@ -3,6 +3,10 @@ require 'http'
 
 module Peekj
   class JiraApi
+    def self.search(jql)
+      response = new.get("search#{jql}")
+    end
+
     def self.get_issue(issue_key)
       response = new.get("issue/#{issue_key}")
 
